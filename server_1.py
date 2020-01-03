@@ -12,7 +12,7 @@ def query():
     batch_unit = request.args.get('batch_unit') #if key doesn't exist, returns None
     batch_id = request.args['batch_id'] #if key doesn't exist, returns a 400, bad request error
     batch_size = request.args.get('batch_size')
-    data=pd.read_csv("Workload_Data/"+benchmark_type+".csv")
+    data=pd.read_csv("https://raw.githubusercontent.com/haniehalipour/Online-Machine-Learning-for-Cloud-Resource-Provisioning-of-Microservice-Backend-Systems/master/Workload%20Data/"+benchmark_type+".csv")
     batch_unit=int(batch_unit)
     batch_size=int(batch_size)
     batch_id=int(batch_id)
